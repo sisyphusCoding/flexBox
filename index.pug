@@ -1,0 +1,64 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    script(src="https://kit.fontawesome.com/0bb7e00eac.js" crossorigin="anonymous")
+    // STYLESHEET
+    link(href='style.css' rel='stylesheet')
+    title FlexBox
+  body
+    h1 flexBox
+    // FlexBox 
+    #app
+      .one
+      .two
+      .three
+    // Input Box 
+    section.selector
+      // flex-direction 
+      form.flex-flow
+        h4 flex-direction
+        section
+          input#flex-flow-0(type='radio' name='flex-flow' checked='checked' value='row')
+          label(for='flex-flow-0') row
+          input#flex-flow-1(type='radio' name='flex-flow' value='column')
+          label(for='flex-flow-1') column
+      // align-items
+      form.align-items
+        h4 align-items (cross-axis)
+        section
+          input#at-0(type='radio' name='align-items' checked='checked' value='center')
+          label(for='at-0') center
+          input#at-1(type='radio' name='align-items' value='baseline')
+          label(for='at-1') baseline
+          input#at-2(type='radio' name='align-items' value='stretch')
+          label(for='at-2') stretch
+          input#at-3(type='radio' name='align-items' value='flex-start')
+          label(for='at-3') flex-start
+          input#at-4(type='radio' name='align-items' value='flex-end')
+          label(for='at-4') flex-end
+      // justify-content
+      form.justify-content
+        h4 justify-content (major-axis)
+        section
+          input#jc-0(type='radio' name='justify-content' checked='checked' value='center')
+          label(for='jc-0') center
+          input#jc-1(type='radio' name='justify-content' value='space-between')
+          label(for='jc-1') space-between
+          input#jc-2(type='radio' name='justify-content' value='space-around')
+          label(for='jc-2') space-around
+          input#jc-3(type='radio' name='justify-content' value='space-evenly')
+          label(for='jc-3') space-evenly
+          input#jc-4(type='radio' name='justify-content' value='flex-start')
+          label(for='jc-4') flex-start
+          input#jc-5(type='radio' name='justify-content' value='flex-end')
+          label(for='jc-5') flex-end
+    footer
+      .name made by anish
+        a(href="https://codepen.io/coding_anish" target="_blank" onclick="void(0);")
+          i(class="fab fa-codepen")
+        a(href="https://twitter.com/sisyphus_coding" target="_blank" onclick="void(0);")
+          i(class="fab fa-twitter")       
+    script(src='script.js')

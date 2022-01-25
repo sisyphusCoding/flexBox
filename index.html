@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0bb7e00eac.js" crossorigin="anonymous"></script>
+    <!-- STYLESHEET-->
+    <link href="style.css" rel="stylesheet">
+    <title>FlexBox</title>
+  </head>
+  <body>
+    <h1>flexBox</h1>
+    <!-- FlexBox -->
+    <div id="app">
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="three"></div>
+    </div>
+    <!-- Input Box -->
+    <section class="selector">
+      <!-- flex-direction -->
+      <form class="flex-flow">
+        <h4>flex-direction</h4>
+        <section>
+          <input id="flex-flow-0" type="radio" name="flex-flow" checked="checked" value="row">
+          <label for="flex-flow-0">row</label>
+          <input id="flex-flow-1" type="radio" name="flex-flow" value="column">
+          <label for="flex-flow-1">column</label>
+        </section>
+      </form>
+      <!-- align-items-->
+      <form class="align-items">
+        <h4>align-items (cross-axis)</h4>
+        <section>
+          <input id="at-0" type="radio" name="align-items" checked="checked" value="center">
+          <label for="at-0">center</label>
+          <input id="at-1" type="radio" name="align-items" value="baseline">
+          <label for="at-1">baseline</label>
+          <input id="at-2" type="radio" name="align-items" value="stretch">
+          <label for="at-2">stretch</label>
+          <input id="at-3" type="radio" name="align-items" value="flex-start">
+          <label for="at-3">flex-start</label>
+          <input id="at-4" type="radio" name="align-items" value="flex-end">
+          <label for="at-4">flex-end</label>
+        </section>
+      </form>
+      <!-- justify-content-->
+      <form class="justify-content">
+        <h4>justify-content (major-axis)</h4>
+        <section>
+          <input id="jc-0" type="radio" name="justify-content" checked="checked" value="center">
+          <label for="jc-0">center</label>
+          <input id="jc-1" type="radio" name="justify-content" value="space-between">
+          <label for="jc-1">space-between</label>
+          <input id="jc-2" type="radio" name="justify-content" value="space-around">
+          <label for="jc-2">space-around</label>
+          <input id="jc-3" type="radio" name="justify-content" value="space-evenly">
+          <label for="jc-3">space-evenly</label>
+          <input id="jc-4" type="radio" name="justify-content" value="flex-start">
+          <label for="jc-4">flex-start</label>
+          <input id="jc-5" type="radio" name="justify-content" value="flex-end">
+          <label for="jc-5">flex-end</label>
+        </section>
+      </form>
+    </section>
+    <footer>
+      <div class="name">made by anish<a href="https://codepen.io/coding_anish" target="_blank" onclick="void(0);"><i class="fab fa-codepen"></i></a><a href="https://twitter.com/sisyphus_coding" target="_blank" onclick="void(0);"><i class="fab fa-twitter">      </i></a></div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
