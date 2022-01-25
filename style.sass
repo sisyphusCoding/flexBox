@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,300;0,500;0,800;1,500&display=swap')
+
+@mixin flex($align-items,$justify-content,$flex-flow)
+	display: flex
+	justify-content: $justify-content
+	align-items: $align-items
+	flex-flow: $flex-flow
+
+@mixin padding ($x,$y)
+	padding-left: $x
+	padding-right: $x
+	padding-top: $y
+	padding-bottom: $y
+	
+$bg: #606060
+
+	
+body 
+	min-height: 100vh
+	background-image: linear-gradient(to right top, #131e25, #132126, #152427, #172627, #1b2927)
+	column-gap: 5rem
+	position: relative
+	overflow-x: hidden
+	row-gap: 5rem
+	@include flex(center,center,row-reverse)
+
+	
+		
+*
+	box-sizing: border-box
+	color:  #aaaaaa
+	font-family: 'Montserrat Alternates', sans-serif
+	text-decoration: none
+	-webkit-user-select: none
+	-webkit-touch-callout: none
+	-webkit-tap-highlight-color: transparent
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+
+
+
+h1
+	font-weight: normal
+	align-self: start
+	position: absolute
+	margin-top: 5vh
+	font-size: 5vh
+	
+@mixin glass
+	background: rgba( 255, 255, 255, .1 )
+	box-shadow:  0 0 32px 0 rgba( 0, 0, 0, 0.5)
+	border-radius: 5px
+
+
+
+
+
+.selector
+	@include flex(center,space-around,column)
+	height: fit-content
+	@include glass
+	font-size: 1.7vh	
+	width: 40vh
+	form
+		@include padding(2rem,1rem)
+		height: fit-content
+		border-radius: .7rem
+		width: 100% 
+		@include flex(center,flex-start,row wrap )
+		h4
+			width: 100%
+		section	
+			width: 100%
+			@include flex(center,space-between,row wrap)
+			column-gap: .3rem
+			row-gap: .3rem	
+			label
+				cursor: pointer
+			
+	
+[id*="app"] 
+	@include glass
+	height: 55vh
+	aspect-ratio: 1
+	column-gap: .5rem
+	@include padding(.5rem,.5rem)
+	position: relative
+	row-gap: .5rem
+	&:after
+		content: attr(data-cross)
+		writing-mode: vertical-rl
+		text-orientation: mixed
+		text-align: center
+		line-height: 4vh
+		font-size: 1.8vh
+		position: absolute
+		height: 55vh
+		animation: fade-in 800ms ease-in
+		top: 0
+		left: -2rem
+		width: 4vh
+	&:before
+		content: attr(data-major)
+		text-align: center
+		animation: fade-in 800ms ease-in
+		line-height: 4vh
+		font-size: 1.8vh
+		position: absolute
+		height: 4vh
+		left: 0
+		width: 55vh
+		bottom: -4vh
+	> *
+		height: 8vh
+		width: 8vh
+		transition: all 1s ease-in 
+		background: linear-gradient(145deg, #494949, #3d3d3d)
+		box-shadow:  0 0 1vh rgba(0,0,0,1)
+		border-radius: .4rem
+	.two
+		width: 16vh
+		height: 12vh
+	.three
+		height: 4vh
+		width: 10vh
+
+
+label
+	box-shadow: inset 2px 2px 0 rgba(0,0,0,0.1) , -2px -2px 0 rgba(0,0,0,0.1)
+	transition: all 800ms ease-out
+	border-radius: .5rem
+	opacity: 0.4
+	@include padding(1rem, .5rem)
+	
+	
+input
+	display: none
+	
+input:checked + label
+	color: #fff
+	box-shadow: inset 2px 2px 5px rgba(0,0,0,0.8) , -2px -2px 5px rgba(0,0,0,0.8)
+	opacity: 0.8
+		
+	
+	
+	
+
+	@keyframes fade-in
+		from
+			opacity: 0
+		to
+			opacity: 1
+			
+footer
+	position: absolute
+	@include flex(center,center,row wrap)
+	width: 18vh
+	height: fit-content
+	bottom: 1vh
+	.name
+		font-size: 1.8vh
+		flex-grow: 2
+		width: 100%
+		text-align: center
+	i
+		@include padding(.4vh,.4vh)
+		cursor: pointer
+		font-size: 1.8vh
+		
+@media only screen and (max-width: 768px)
+
+	body
+			@include flex(center,center,column)
+			row-gap: 6vh
+			column-gap: 3vh
+			
+	footer
+		position: absolute
+		bottom: 1vw
+		.name,i
+			font-size: 1.3vh
+
+	h1
+		display: none
+
+	.selector
+		width: 80vw
+		height: fit-content
+		font-size: 2.2vw
+		form
+			@include padding(1rem,.5rem)
+	#app
+		height: 35vh
+		width: 80vw
+		&:before
+			width: 80vw
+		&:after
+			height: 35vh
+		
+		
+
+		
+	
