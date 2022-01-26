@@ -254,16 +254,7 @@ footer {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  bottom: 1vh;
-}
-
-footer .name {
-  font-size: 1.8vh;
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
-  width: 100%;
-  text-align: center;
+  bottom: 2vh;
 }
 
 footer i {
@@ -296,10 +287,10 @@ footer i {
   }
   footer {
     position: absolute;
-    bottom: 1vw;
+    bottom: 2vw;
   }
-  footer .name, footer i {
-    font-size: 1.3vh;
+  footer i {
+    font-size: 1.5vh;
   }
   h1 {
     display: none;
